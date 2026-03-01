@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start Typewriter
     const typewriterEl = document.getElementById('typewriter');
     if (typewriterEl) {
-        new TypeWriter(typewriterEl, ["Fullstack Developer", "IoT Enthusiast", "Python", "CSS", "Java", "HTML"]);
+        new TypeWriter(typewriterEl, ["Fullstack Developer", "Junior Software Developer", " Skilled in Python", "CSS", "Java", "HTML"]);
     }
 
     // Navbar Scroll Effect
