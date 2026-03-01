@@ -1,0 +1,364 @@
+/* --- 1. VARIABILI E LOGICA TEMA --- */
+:root {
+    /* TEMA SCURO */
+    --primary-color: #2c3e50;
+    --accent-color: #8f12e2;
+    --text-light: #7f8c8d;
+    --bg-color: #2C2c2e;
+    --hero-bg-dark: linear-gradient(to bottom, #121212 80%, #2C2c2e 100%);
+    --hero-bg-light: linear-gradient(to bottom, rgb(201, 201, 201) 80%, #BCB5AC 100%);
+    
+    --card-bg: #1a1a1c;
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --text-main: #e0e0e0;        /* Grigio chiaro ad alto contrasto per massima leggibilità */
+    --text-title: #ffffff;       
+    --nav-bg: rgba(0, 0, 0, 0.39);
+    --card-border: rgba(255, 255, 255, 0.1);
+    
+    --hamburger-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --hamburger-icon-open: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%238f12e2' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body.light-mode {
+    /* TEMA CHIARO */
+    --bg-color: #BCB5AC; 
+    --card-bg: #f5f3f0;
+    --card-shadow: rgba(0, 0, 0, 0.15);
+    --text-main: #1a1a1c;        /* Nero antracite per tema chiaro */
+    --text-title: #000000;       
+    --nav-bg: rgba(255, 255, 255, 0.39);
+    --card-border: rgba(0, 0, 0, 0.1);
+    
+    --hamburger-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- 2. BASE E NAVBAR (ANIMAZIONE LINK INTEGRATA) --- */
+html { scroll-behavior: smooth; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    color: var(--text-main); 
+    background-color: var(--bg-color); 
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* --- INIZIALIZZAZIONE ICONA HAMBURGER --- */
+.navbar-toggler {
+    padding: 0.25rem 0.6rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent; /* Rimuove sfondi indesiderati */
+    border-radius: 6px;            /* Arrotondamento standard */
+    outline: none !important;      /* Rimuove il fastidioso bordo blu al click */
+    box-shadow: none !important;   /* Rimuove ombre di default di Bootstrap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--text-title) !important; 
+    transition: border-color 0.3s ease;
+}
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;         /* Forza l'SVG a coprire tutto lo spazio */
+    transition: background-image 0.3s ease-in-out; /* Transizione fluida cambio icona */
+    background-image: var(--hamburger-icon) !important; 
+}
+
+.navbar-glass { 
+    background: transparent; 
+    transition: all 0.4s ease; 
+    padding: 20px 0;
+}
+
+.navbar-brand, .navbar-nav .nav-link { 
+    color: var(--text-title) !important; 
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateX(-4px);
+    text-shadow: 0 6px 12px rgba(143, 18, 226, 0.6);
+}
+
+.navbar-glass.scrolled { 
+    background: var(--nav-bg) !important; 
+    backdrop-filter: blur(5px); 
+    padding: 10px 0;
+    border-bottom: 1px solid var(--card-border); 
+}
+
+/* Toggler Hamburger */
+
+.navbar-toggler:not(.collapsed) {
+    border-color: var(--accent-color) !important;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-image: var(--hamburger-icon-open) !important;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    padding-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--hero-bg-light) !important;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--hero-bg-dark);
+    transition: opacity 0.6s ease-in-out;
+    z-index: -1;
+    opacity: 1; 
+}
+body.light-mode .hero-section::before { opacity: 0; }
+
+.typewriter-text {
+    font-size: 2.2rem;
+    color: var(--text-light); 
+    display: inline-block; 
+    border-right: 3px solid var(--accent-color);
+    padding-right: 8px;
+    min-height: 1.2em; 
+    vertical-align: middle;
+}
+
+.hero-section .lead { 
+    color: var(--text-main) !important; 
+    font-weight: 500; 
+}
+
+.profile-img-hero {
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 10px 30px var(--card-shadow);
+}
+
+/* --- 4. BOTTONI: HERO & CARDS --- */
+.btn-primary, .btn-outline-secondary {
+    font-weight: 700 !important;
+    border-radius: 8px;
+    padding: 12px 30px;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary { 
+    background-color: var(--accent-color) !important; 
+    color: white !important; 
+    border: none !important; 
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(143, 18, 226, 0.45) !important;
+}
+
+.btn-outline-secondary { 
+    color: var(--text-title) !important; 
+    border: 2px solid var(--accent-color) !important; 
+    background: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* Tasti Cards (Piccoli) */
+.project-card .btn-success { 
+    font-weight: 700 !important;
+    color: var(--text-title) !important; 
+    border: 2px solid var(--accent-color) !important; 
+    background: transparent !important;
+    border-radius: 6px; 
+    padding: 6px 6px !important;
+    font-size: 0.85rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.project-card .btn-success:hover { 
+    background: var(--accent-color) !important; 
+    color: #ffffff !important; 
+    transform: translateY(-3px);
+}
+
+/* --- 5. CARDS --- */
+.project-card .card { 
+    transition: all 0.4s ease; 
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: 0 6px 18px var(--card-shadow);
+    border-radius: 18px !important;
+}
+.project-card .card:hover { transform: translateY(-10px); }
+.img-container { height: 230px; overflow: hidden; border-radius: 18px 18px 0 0; }
+.img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+
+.card h3 { color: var(--text-title) !important; }
+/* Il colore della descrizione eredita correttamente var(--text-main) */
+.card p { color: var(--text-main) !important; line-height: 1.6; }
+
+/* --- 6. FLOATING BUTTON --- */
+/* --- TASTO CAMBIO TEMA (FROSTED GLASS STYLE) --- */
+/* --- FIX DEFINITIVO TASTO FLOATING (FROSTED + MULTI-SHADOW) --- */
+
+.btn-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    
+    /* Effetto Frosted Glass */
+    background: var(--nav-bg) !important; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Layout Icona */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--accent-color) !important;
+    
+    /* Bordo e Ombra Base (Tema Scuro) */
+    border: 1px solid var(--card-border) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    
+    cursor: pointer;
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover Tema Scuro: Ombra viola intensa */
+.btn-floating:hover {
+    transform: scale(1.1) rotate(15deg);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 12px 40px rgba(143, 18, 226, 0.6);
+}
+
+/* --- ADATTAMENTO SPECIFICO TEMA CHIARO --- */
+body.light-mode .btn-floating {
+    /* Vetro più chiaro e bordo più visibile per contrasto */
+    background: rgba(255, 255, 255, 0.45) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    /* Ombra più scura e definita per il fondo chiaro */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover Tema Chiaro: Doppia Ombra (Nera per profondità + Viola per effetto) */
+body.light-mode .btn-floating:hover {
+    border-color: var(--accent-color) !important;
+    /* La combinazione di due ombre rende l'effetto visibile sul beige */
+    box-shadow: 
+        0 15px 35px rgba(143, 18, 226, 0.5), /* Bagliore Viola */
+        0 5px 15px rgba(0, 0, 0, 0.2);       /* Ombra di contatto scura */
+}
+
+/* Reset focus per pulizia visiva */
+.btn-floating:focus {
+    outline: none;
+}
+
+/* --- 8. SEZIONE MEDIA QUERIES (RESPONSIVE) --- */
+
+/* Dispositivi Large (Desktop standard) */
+@media (max-width: 1199.98px) {
+    .profile-img-hero {
+        width: 350px;
+        height: 350px;
+    }
+    .typewriter-text {
+        font-size: 1.8rem;
+    }
+}
+
+/* Dispositivi Medium (Tablet / iPad) */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        padding: 12px 0 !important;
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero in colonna su Tablet */
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .profile-img-hero {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Dispositivi Small (Smartphone) */
+@media (max-width: 767.98px) {
+    .typewriter-text {
+        font-size: 1.5rem;
+    }
+    .hero-section{
+        padding-top: 40px;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn-primary, .btn-outline-secondary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-floating {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .project-card .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra Small (Telefoni Mini) */
+@media (max-width: 480px) {
+    .hero-section{
+        padding-top: 40px;
+    }
+    .profile-img-hero {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
