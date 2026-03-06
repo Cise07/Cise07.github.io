@@ -289,6 +289,7 @@ body.light-mode .btn-floating:hover {
     .typewriter-text {
         font-size: 1.8rem;
     }
+
 }
 
 /* Dispositivi Medium (Tablet / iPad) */
@@ -304,7 +305,7 @@ body.light-mode .btn-floating:hover {
 
     /* Hero in colonna su Tablet */
     .hero-section {
-        padding-top: 100px;
+        padding-top:10px;
         text-align: center;
     }
 
@@ -319,13 +320,13 @@ body.light-mode .btn-floating:hover {
     }
 }
 
-/* Dispositivi Small (Smartphone) */
+/* Dispositivi Small (Smartphone landscape) */
 @media (max-width: 767.98px) {
     .typewriter-text {
         font-size: 1.5rem;
     }
     .hero-section{
-        padding-top: 40px;
+        padding-top: 80px;
     }
     .hero-section h1 {
         font-size: 2.2rem;
@@ -348,10 +349,10 @@ body.light-mode .btn-floating:hover {
     }
 }
 
-/* Extra Small (Telefoni Mini) */
-@media (max-width: 480px) {
+/* Vertical phones*/
+@media (max-width: 576px) {
     .hero-section{
-        padding-top: 40px;
+        padding-top: 80px;
     }
     .profile-img-hero {
         width: 220px;
