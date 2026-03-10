@@ -157,6 +157,12 @@ body.light-mode .hero-section::before { opacity: 0; }
     border-radius: 8px;
     padding: 12px 30px;
     transition: all 0.3s ease !important;
+    display: inline-flex;   
+    align-items: center;     
+    justify-content: center;  
+    min-height: 50px;        
+    
+    
 }
 
 .btn-primary { 
@@ -280,19 +286,21 @@ body.light-mode .btn-floating:hover {
 
 /* --- 8. SEZIONE MEDIA QUERIES (RESPONSIVE) --- */
 
-/* Dispositivi Large (Desktop standard) */
+/* Dispositivi Large (Desktop standard,Tablet landscape) */
 @media (max-width: 1199.98px) {
     .profile-img-hero {
         width: 350px;
         height: 350px;
     }
+
     .typewriter-text {
         font-size: 1.8rem;
     }
 
+
 }
 
-/* Dispositivi Medium (Tablet / iPad) */
+/* Dispositivi Medium Vertical (Tablet / iPad) */
 @media (max-width: 991.98px) {
     .navbar-nav .nav-link {
         padding: 12px 0 !important;
@@ -301,12 +309,6 @@ body.light-mode .btn-floating:hover {
 
     .navbar-nav .nav-link:last-child {
         border-bottom: none;
-    }
-
-    /* Hero in colonna su Tablet */
-    .hero-section {
-        padding-top:10px;
-        text-align: center;
     }
 
     .hero-section .row {
@@ -318,9 +320,10 @@ body.light-mode .btn-floating:hover {
         height: 280px;
         margin-bottom: 40px;
     }
+
 }
 
-/* Dispositivi Small (Smartphone landscape) */
+/* Smartphone landscape */
 @media (max-width: 767.98px) {
     .typewriter-text {
         font-size: 1.5rem;
@@ -352,7 +355,7 @@ body.light-mode .btn-floating:hover {
 /* Vertical phones*/
 @media (max-width: 576px) {
     .hero-section{
-        padding-top: 80px;
+        padding-top: 100px;
     }
     .profile-img-hero {
         width: 220px;
@@ -362,4 +365,6 @@ body.light-mode .btn-floating:hover {
     .navbar-brand {
         font-size: 1.2rem;
     }
+
 }
+
