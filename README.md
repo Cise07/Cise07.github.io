@@ -1,49 +1,49 @@
 # 🚀 _CISE_ Portfolio
 
-Benvenuti nel repository del mio portfolio personale. Questo progetto nasce come vetrina interattiva per presentare i miei lavori, le mie certificazioni e le mie competenze come Software Engineering Student.
+Welcome to my personal portfolio repository. This project serves as an interactive showcase to present my work, certifications, and skills as a Software Engineering Student.
 
 ---
 
 ## 🛠️ Tech Stack
 
-Il progetto è stato sviluppato con un focus sulla pulizia del codice e sulle performance:
+The project was developed with a focus on clean code and high performance:
 
-* **Frontend:** HTML5 e CSS3 personalizzato con variabili dinamiche.
-* **Logica:** JavaScript (Vanilla ES6) per la gestione del tema e degli effetti visivi.
-* **Framework UI:** [Bootstrap 5.3](https://getbootstrap.com/) per una struttura solida e responsive.
-* **Iconografia:** FontAwesome e Bootstrap Icons.
-* **Tipografia:** Inter (via Google Fonts).
+* **Frontend:** HTML5 and custom CSS3 utilizing dynamic variables.
+* **Logic:** JavaScript (Vanilla ES6) for theme management and visual effects.
+* **UI Framework:** [Bootstrap 5.3](https://getbootstrap.com/) for a solid, responsive structure.
+* **Iconography:** FontAwesome and Bootstrap Icons.
+* **Typography:** Inter (via Google Fonts).
 
 ---
 
-## ✨ Features Principali
+## ✨ Key Features
 
 ### 🌓 Dark & Light Mode
-Un sistema di gestione del tema basato su classi CSS e `localStorage` per garantire che la preferenza dell'utente venga mantenuta anche dopo il ricaricamento della pagina. Il toggle è un pulsante flottante con effetto *frosted glass*.
+A theme management system based on CSS classes and `localStorage` to ensure user preferences persist even after a page reload. The toggle is a floating button featuring a *frosted glass* effect.
 
 ### ⌨️ Custom Typewriter Effect
-Un motore di scrittura dinamica implementato in JavaScript che mette in evidenza le mie competenze principali: *Fullstack Developer, IoT Enthusiast, Python, CSS, Java, HTML*.
+A dynamic typing engine implemented in JavaScript that highlights my core competencies: *Fullstack Developer, IoT Enthusiast, Python, CSS, Java, HTML*.
 
-### 📱 Layout Responsive
-Il sito è completamente ottimizzato per dispositivi mobile e tablet grazie a media queries mirate e all'uso intelligente della griglia di Bootstrap, garantendo un'esperienza fluida su ogni schermo.
-
----
-
-## 📂 Progetti & Certificazioni
-
-Nel portfolio sono evidenziati i miei lavori più significativi:
-* **Burrows Wheeler Calculator:** Applicazione client-server in Python.
-* **Curious Traveler:** CLI Python app per la generazione di trip cards.
-* **bE-More:** Sistema IoT Fullstack premiato in un tech contest.
-* **Certificazioni:** Cambridge English B2 e GitHub Sorint.lab "Hackersgen".
+### 📱 Responsive Layout
+The site is fully optimized for mobile and tablet devices thanks to targeted media queries and intelligent use of the Bootstrap grid, ensuring a fluid experience on any screen.
 
 ---
 
-## 📫 Contatti
+## 📂 Projects & Certifications
+
+The portfolio highlights my most significant works:
+* **Burrows Wheeler Calculator:** A Python-based client-server application.
+* **Curious Traveler:** A Python CLI app for generating trip cards.
+* **bE-More:** A Fullstack IoT system awarded in a tech contest.
+* **Certifications:** Cambridge English B2 and GitHub Sorint.lab "Hackersgen".
+
+---
+
+## 📫 Contacts
 
 * **Email:** [ciseriagabriele@gmail.com](mailto:ciseriagabriele@gmail.com)
 * **GitHub:** [Cise07](https://github.com/Cise07)
 * **Instagram:** [@24.7_cise](https://www.instagram.com/24.7_cise?igsh=MWNveDA3dXFwZGpw&utm_source=qr)
 
 ---
-*Creato con dedizione da _CISE_*
+*Created with dedication by _CISE_*
