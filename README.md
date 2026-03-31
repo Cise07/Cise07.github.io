@@ -35,6 +35,7 @@ The portfolio highlights my most significant works:
 * **Burrows Wheeler Calculator:** A Python-based client-server application.
 * **Curious Traveler:** A Python CLI app for generating trip cards.
 * **bE-More:** A Fullstack IoT system awarded in a tech contest.
+* **E-Commerce Management System:** A simulation of an E-commerce using databases and sql.
 * **Certifications:** Cambridge English B2 and GitHub Sorint.lab "Hackersgen".
 
 ---
