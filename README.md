@@ -32,6 +32,7 @@ The site is fully optimized for mobile and tablet devices thanks to targeted med
 ## 📂 Projects & Certifications
 
 The portfolio highlights my most significant works:
+* **Bmo Local AI assistant:** An offline-first AI assistant inspired by BMO
 * **Burrows Wheeler Calculator:** A Python-based client-server application.
 * **Curious Traveler:** A Python CLI app for generating trip cards.
 * **bE-More:** A Fullstack IoT system awarded in a tech contest.
