@@ -1,6 +1,6 @@
-/* --- 1. VARIABILI E LOGICA TEMA --- */
+/* --- 1. VARIABLES AND THEME LOGIC --- */
 :root {
-    /* TEMA SCURO */
+    /* DARK THEME */
     --primary-color: #2c3e50;
     --accent-color: #8f12e2;
     --text-light: #7f8c8d;
@@ -10,29 +10,36 @@
     
     --card-bg: #1a1a1c;
     --card-shadow: rgba(0, 0, 0, 0.5);
-    --text-main: #e0e0e0;        /* Grigio chiaro ad alto contrasto per massima leggibilità */
+    --text-main: #e0e0e0;        /* Light gray with high contrast for maximum readability */
     --text-title: #ffffff;       
     --nav-bg: rgba(0, 0, 0, 0.39);
     --card-border: rgba(255, 255, 255, 0.1);
+    --shadow-color: 0 8px 5px rgba(0, 0, 0, 0.664);
     
     --hamburger-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     --hamburger-icon-open: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%238f12e2' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* --- NAVBAR HEIGHT COMPENSATION FOR ANCHORS --- */
+section {
+    scroll-margin-top: 50px; /* Adjust this value if the navbar is taller or shorter */
+}
+
 body.light-mode {
-    /* TEMA CHIARO */
+    /* LIGHT THEME */
     --bg-color: #BCB5AC; 
     --card-bg: #f5f3f0;
     --card-shadow: rgba(0, 0, 0, 0.15);
-    --text-main: #1a1a1c;        /* Nero antracite per tema chiaro */
+    --text-main: #1a1a1c;        /* Anthracite black for light theme */
     --text-title: #000000;       
     --nav-bg: rgba(255, 255, 255, 0.39);
     --card-border: rgba(0, 0, 0, 0.1);
+    --shadow-color: 0 8px 5px rgba(248, 244, 244, 0.664);
     
     --hamburger-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* --- 2. BASE E NAVBAR (ANIMAZIONE LINK INTEGRATA) --- */
+/* --- 2. BASE AND NAVBAR (INTEGRATED LINK ANIMATION) --- */
 html { scroll-behavior: smooth; }
 body { 
     font-family: 'Inter', sans-serif; 
@@ -41,15 +48,15 @@ body {
     transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-/* --- INIZIALIZZAZIONE ICONA HAMBURGER --- */
+/* --- HAMBURGER ICON INITIALIZATION --- */
 .navbar-toggler {
     padding: 0.25rem 0.6rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent; /* Rimuove sfondi indesiderati */
-    border-radius: 6px;            /* Arrotondamento standard */
-    outline: none !important;      /* Rimuove il fastidioso bordo blu al click */
-    box-shadow: none !important;   /* Rimuove ombre di default di Bootstrap */
+    background-color: transparent; /* Removes unwanted backgrounds */
+    border-radius: 6px;            /* Standard rounding */
+    outline: none !important;      /* Removes the annoying blue border on click */
+    box-shadow: none !important;   /* Removes default Bootstrap shadows */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +70,8 @@ body {
     vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;         /* Forza l'SVG a coprire tutto lo spazio */
-    transition: background-image 0.3s ease-in-out; /* Transizione fluida cambio icona */
+    background-size: 100%;         /* Forces the SVG to cover all space */
+    transition: background-image 0.3s ease-in-out; /* Smooth icon change transition */
     background-image: var(--hamburger-icon) !important; 
 }
 
@@ -95,7 +102,7 @@ body {
     border-bottom: 1px solid var(--card-border); 
 }
 
-/* Toggler Hamburger */
+/* Hamburger Toggler */
 
 .navbar-toggler:not(.collapsed) {
     border-color: var(--accent-color) !important;
@@ -151,7 +158,7 @@ body.light-mode .hero-section::before { opacity: 0; }
     box-shadow: 0 10px 30px var(--card-shadow);
 }
 
-/* --- 4. BOTTONI: HERO & CARDS --- */
+/* --- 4. BUTTONS: HERO & CARDS --- */
 .btn-primary, .btn-outline-secondary {
     font-weight: 700 !important;
     border-radius: 8px;
@@ -187,7 +194,11 @@ body.light-mode .hero-section::before { opacity: 0; }
     color: white !important;
 }
 
-/* Tasti Cards (Piccoli) */
+.custom-text-shadow{
+    text-shadow: var(--shadow-color)
+}
+
+/* Card Buttons (Small) */
 .project-card .btn-success { 
     font-weight: 700 !important;
     color: var(--text-title) !important; 
@@ -218,12 +229,12 @@ body.light-mode .hero-section::before { opacity: 0; }
 .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 
 .card h3 { color: var(--text-title) !important; }
-/* Il colore della descrizione eredita correttamente var(--text-main) */
+/* The description color correctly inherits var(--text-main) */
 .card p { color: var(--text-main) !important; line-height: 1.6; }
 
 /* --- 6. FLOATING BUTTON --- */
-/* --- TASTO CAMBIO TEMA (FROSTED GLASS STYLE) --- */
-/* --- FIX DEFINITIVO TASTO FLOATING (FROSTED + MULTI-SHADOW) --- */
+/* --- THEME CHANGE BUTTON (FROSTED GLASS STYLE) --- */
+/* --- DEFINITIVE FLOATING BUTTON FIX (FROSTED + MULTI-SHADOW) --- */
 
 .btn-floating {
     position: fixed;
@@ -233,19 +244,19 @@ body.light-mode .hero-section::before { opacity: 0; }
     height: 55px;
     border-radius: 50%;
     
-    /* Effetto Frosted Glass */
+    /* Frosted Glass Effect */
     background: var(--nav-bg) !important; 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     
-    /* Layout Icona */
+    /* Icon Layout */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
     color: var(--accent-color) !important;
     
-    /* Bordo e Ombra Base (Tema Scuro) */
+    /* Base Border and Shadow (Dark Theme) */
     border: 1px solid var(--card-border) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     
@@ -254,39 +265,39 @@ body.light-mode .hero-section::before { opacity: 0; }
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Hover Tema Scuro: Ombra viola intensa */
+/* Dark Theme Hover: Intense purple shadow */
 .btn-floating:hover {
     transform: scale(1.1) rotate(15deg);
     border-color: var(--accent-color) !important;
     box-shadow: 0 12px 40px rgba(143, 18, 226, 0.6);
 }
 
-/* --- ADATTAMENTO SPECIFICO TEMA CHIARO --- */
+/* --- SPECIFIC LIGHT THEME ADAPTATION --- */
 body.light-mode .btn-floating {
-    /* Vetro più chiaro e bordo più visibile per contrasto */
+    /* Lighter glass and more visible border for contrast */
     background: rgba(255, 255, 255, 0.45) !important;
     border: 1px solid rgba(0, 0, 0, 0.15) !important;
-    /* Ombra più scura e definita per il fondo chiaro */
+    /* Darker and defined shadow for light background */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Hover Tema Chiaro: Doppia Ombra (Nera per profondità + Viola per effetto) */
+/* Light Theme Hover: Double Shadow (Black for depth + Purple for effect) */
 body.light-mode .btn-floating:hover {
     border-color: var(--accent-color) !important;
-    /* La combinazione di due ombre rende l'effetto visibile sul beige */
+    /* The combination of two shadows makes the effect visible on beige */
     box-shadow: 
-        0 15px 35px rgba(143, 18, 226, 0.5), /* Bagliore Viola */
-        0 5px 15px rgba(0, 0, 0, 0.2);       /* Ombra di contatto scura */
+        0 15px 35px rgba(143, 18, 226, 0.5), /* Purple Glow */
+        0 5px 15px rgba(0, 0, 0, 0.2);       /* Dark contact shadow */
 }
 
-/* Reset focus per pulizia visiva */
+/* Focus reset for visual cleanliness */
 .btn-floating:focus {
     outline: none;
 }
 
-/* --- 8. SEZIONE MEDIA QUERIES (RESPONSIVE) --- */
+/* --- 8. MEDIA QUERIES SECTION (RESPONSIVE) --- */
 
-/* Dispositivi Large (Desktop standard,Tablet landscape) */
+/* Large Devices (Standard Desktop, Landscape Tablet) */
 @media (max-width: 1199.98px) {
     .profile-img-hero {
         width: 350px;
@@ -300,7 +311,7 @@ body.light-mode .btn-floating:hover {
 
 }
 
-/* Dispositivi Medium Vertical (Tablet / iPad) */
+/* Medium Vertical Devices (Tablet / iPad) */
 @media (max-width: 991.98px) {
     .navbar-nav .nav-link {
         padding: 12px 0 !important;
@@ -323,7 +334,7 @@ body.light-mode .btn-floating:hover {
 
 }
 
-/* Smartphone landscape */
+/* Landscape Smartphone */
 @media (max-width: 767.98px) {
     .typewriter-text {
         font-size: 1.5rem;
@@ -367,4 +378,3 @@ body.light-mode .btn-floating:hover {
     }
 
 }
-

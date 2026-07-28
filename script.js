@@ -45,17 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 3. CHIUSURA AUTOMATICA NAVBAR (DA INSERIRE QUI) ---
+    // --- 3. AUTOMATIC NAVBAR CLOSING (INSERT HERE) ---
     const navLinks = document.querySelectorAll('.nav-link');
     const menuToggle = document.getElementById('navbarNav');
     
-    // Controlliamo che l'elemento esista per evitare errori
+    // Check that the element exists to avoid errors
     if (menuToggle) {
         const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
 
         navLinks.forEach((link) => {
             link.addEventListener('click', () => {
-                // Chiude il menu solo se è aperto (classe 'show' di Bootstrap)
+                // Closes the menu only if it's open (Bootstrap's 'show' class)
                 if (menuToggle.classList.contains('show')) {
                     bsCollapse.hide();
                 }
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
 
-    // Controlla se l'utente aveva già scelto il tema chiaro in precedenza
+    // Checks if the user had previously chosen the light theme
     if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
         if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             
-            // Cambia l'icona e salva la preferenza nel browser
+            // Changes the icon and saves the preference in the browser
             if (body.classList.contains('light-mode')) {
                 if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
                 localStorage.setItem('theme', 'light');
@@ -88,4 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-

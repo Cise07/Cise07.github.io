@@ -11,7 +11,7 @@
     <meta name="keywords" content="Gabriele Ciseria, Cise07, _Cise_ , Fullstack Developer, IoT, Java , Python , Web Design , Portfolio, Web Developer, Italy">
     <meta name="author" content="Gabriele Ciseria">
 
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,23 +33,24 @@
         
             <div class="collapse fw-bold navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-end"> 
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#portfolio">Projects</a></li>
+                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <main>
         <section class="hero-section">
-         <div class="container">
+        <div class="container">
         <div class="row align-items-center flex-column-reverse flex-lg-row">
             
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-3 fw-bold">Hi, im <span style="color: var(--accent-color)">_CISE_</span></h1>
+                <h1 class="display-3 custom-text-shadow fw-bold">Hi, im <span style="color: var(--accent-color)">_CISE_</span></h1>
                 <div class="typewriter-container">
-                    <h2 id="typewriter" class="typewriter-text"></h2>
+                    <h2 id="typewriter" class="typewriter-text custom-text-shadow"></h2>
                 </div>
                 <p class="lead text-muted mb-4">Junior software developer based in Treviglio.
                     I bridge the gap between creative Web Design (HTML/CSS/JS) 
@@ -64,22 +65,77 @@
             </div>
 
             <div class="col-lg-5 d-flex justify-content-center mb-4 mb-lg-0">
-                <img src="images/home_cat_pic.webp" alt="Profile" class="profile-img-hero">
+                <img src="./assets/home_cat_pic.webp" alt="Profile-pic" class="profile-img-hero">
             </div>
 
         </div>
     </div>
         </section>
 
+        <section id="skills" class="py-5">
+    <div class="container">
+        
+        <h2 class="text-center custom-text-shadow mb-5 fw-bold">My Skills</h2>
+        
+        <div class="row g-4">
+            
+            <!-- Skill 1 -->
+            <div class="col-12 col-md-6 col-lg-3 project-card">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="fas fa-code fa-3x mb-3" style="color: var(--accent-color);"></i>
+                        <h3 class="h5 fw-bold">Software Development</h3>
+                        <p class="text-muted small flex-grow-1 mb-0">C, C++, Java, Python, SQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="col-12 col-md-6 col-lg-3 project-card">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--accent-color);"></i>
+                        <h3 class="h5 fw-bold">Web Development</h3>
+                        <p class="text-muted small flex-grow-1 mb-0">HTML, CSS, Architettura MVC, Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="col-12 col-md-6 col-lg-3 project-card">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="fas fa-server fa-3x mb-3" style="color: var(--accent-color);"></i>
+                        <h3 class="h5 fw-bold">Hardware, Software & OS</h3>
+                        <p class="text-muted small flex-grow-1 mb-0">Linux, Ubuntu, Windows, Desktop PC Building</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="col-12 col-md-6 col-lg-3 project-card">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="fas fa-users fa-3x mb-3" style="color: var(--accent-color);"></i>
+                        <h3 class="h5 fw-bold">Soft Skills</h3>
+                        <p class="text-muted small flex-grow-1 mb-0">Team Work, Problem solving, Communication</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
         <section id="portfolio" class="py-5">
             <div class="container">
-                <h2 class="text-center portfolio-title mb-5 fw-bold">Project Gallery</h2>
+                <h2 class="text-center custom-text-shadow mb-5 fw-bold">Project Gallery</h2>
 
                 <div class="row g-4" id="projectsGrid">
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/bmo.png" alt="Burrows Wheeler"></div>
+                            <div class="img-container"><img src="./assets/projects/bmo.webp" alt="bmo-ai-assistant"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">Bmo local Ai Assistant (WIP) </h3>
                                 <p class="text-muted small flex-grow-1">An offline-first Bmo inspired AI assistant with online search capabilities,coded in python</p>
@@ -92,7 +148,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/bwt.webp" alt="Burrows Wheeler"></div>
+                            <div class="img-container"><img src="./assets/projects/bwt.webp" alt="Burrows Wheeler"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">Burrows Wheeler Calculator</h3>
                                 <p class="text-muted small flex-grow-1">Client-server python application to easily compress strings using bwt algorithm</p>
@@ -105,7 +161,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/Curious_traveler.webp" alt="Traveler"></div>
+                            <div class="img-container"><img src="./assets/projects/Curious_traveler.webp" alt="Traveler"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">Curious Traveler</h3>
                                 <p class="text-muted small flex-grow-1">CLI python app to easily create trip cards based on free APIs</p>
@@ -118,7 +174,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/e-commerce.webp" alt="E-commerce"></div>
+                            <div class="img-container"><img src="./assets/projects/e-commerce.webp" alt="E-commerce"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">E-commerce Sql Simulation</h3>
                                 <p class="text-muted small flex-grow-1">A simple web app made to simulate the use of a database and sql language to manage an e-commerce website</p>
@@ -131,7 +187,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/BEmore.webp" alt="bE-More"></div>
+                            <div class="img-container"><img src="./assets/projects/BEmore.webp" alt="bE-More"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">bE-More - Energy System</h3>
                                 <p class="text-muted small flex-grow-1">IoT System - React - Arduino - Fullstack energy monitoring.</p>
@@ -144,7 +200,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/panchina.webp" alt="Bench"></div>
+                            <div class="img-container"><img src="./assets/projects/kindness_bench.webp" alt="Bench"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">The Bench of Kindness</h3>
                                 <p class="text-muted small flex-grow-1">Social project, created a bench using AutoCad, with a peace focused quote printed on it</p>
@@ -162,17 +218,17 @@
 
          <section id="certificates" class="py-5">
             <div class="container">
-                <h2 class="text-center portfolio-title mb-5 fw-bold">Certificates</h2>
+                <h2 class="text-center custom-text-shadow mb-5 fw-bold">Certificates & Badges</h2>
 
                 <div class="row g-4" id="projectsGrid">
                      <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/Statement.webp" alt="Burrows Wheeler"></div>
+                            <div class="img-container"><img src="./assets/certificates-badges/Statement.webp" alt="statement"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">B2 English Cambridge Certificate</h3>
                                 <p class="text-muted small flex-grow-1">B2 english certificate issued by Cambridge Milano</p>
                                 <div class="mt-auto">
-                                     <a href="./images/Statement.webp" class="btn btn-success btn-sm fw-bold" target="_blank">Open Certificate</a>
+                                     <a href="./assets/certificates-badges/Statement.webp" class="btn btn-success btn-sm fw-bold" target="_blank">Open Certificate</a>
                                 </div>
                             </div>
                         </div>
@@ -180,12 +236,64 @@
 
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./images/Github_cert.webp" alt="Bench"></div>
+                            <div class="img-container"><img src="./assets/certificates-badges/Github_cert.webp" alt="github-cert"></div>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="h5 fw-bold">Git-Hub Certificate</h3>
                                 <p class="text-muted small flex-grow-1">Git-Hub certificate issued by Sorint.lab "Hackersgen",obtained by completing an online course</p>
                                 <div class="mt-auto">
-                                     <a href="./images/Github_cert.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Certificate</a>
+                                     <a href="./assets/certificates-badges/Github_cert.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container"><img src="./assets/certificates-badges/english-listening-badge.webp" alt="eng-list-badge"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 fw-bold">B2 English Listening Badge</h3>
+                                
+                                <div class="mt-auto">
+                                     <a href="./assets/certificates-badges/english-listening-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container"><img src="./assets/certificates-badges/english-reading-badge.webp" alt="eng-read-badge"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 fw-bold">B2 English Reading Badge</h3>
+                                
+                                <div class="mt-auto">
+                                     <a href="./assets/certificates-badges/english-reading-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container"><img src="./assets/certificates-badges/ita-badge.webp" alt="ita-badge"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 fw-bold">Level 3 Italian Language Badge</h3>
+
+                                <div class="mt-auto">
+                                     <a href="./assets/certificates-badges/ita-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container"><img src="./assets/certificates-badges/math-badge.webp" alt="math-badge"></div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 fw-bold">Level 3 Math Badge</h3>
+                               
+                                <div class="mt-auto">
+                                     <a href="./assets/certificates-badges/math-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
                                 </div>
                             </div>
                         </div>
@@ -197,12 +305,12 @@
 
         <section id="contact" class="py-5 bg-dark text-white">
     <div class="container text-center">
-        <h2 class="mb-4">Get in Touch</h2>
+        <h2 class="custom-text-shadow mb-4">Get in Touch</h2>
         
         <div class="d-flex flex-column align-items-center gap-3 mb-5">
-            <p class="mb-0">Email : ciseriagabriele@gmail.com</p>
+            <p class="mb-0">Email: ciseriagabriele@gmail.com</p>
             
-            <a href="./downloadables/CV_lavoro_2pagine.pdf" download="CV_lavoro_2pagine.pdf" class="btn btn-outline-light mt-2">
+            <a href="./assets/downloadables/CV_Ciseria.pdf" download="CV_Ciseria.pdf" class="btn btn-outline-light mt-2 custom-text-shadow">
                 <i class="fas fa-file-download me-2"></i> Download my CV
             </a>
         </div>
