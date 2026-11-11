@@ -33,6 +33,7 @@ The site is fully optimized for mobile and tablet devices thanks to targeted med
 
 The portfolio highlights my most significant works:
 * **Bmo Local AI assistant:** An offline-first AI assistant inspired by BMO
+* **Android Sim Racing Dashboard:** Real-time GT3-style Android telemetry dashboard (Kotlin/Jetpack Compose) with a Python WebSocket bridge.
 * **Burrows Wheeler Calculator:** A Python-based client-server application.
 * **Curious Traveler:** A Python CLI app for generating trip cards.
 * **bE-More:** A Fullstack IoT system awarded in a tech contest.
