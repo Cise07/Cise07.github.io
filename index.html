@@ -2,372 +2,397 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="W6TKt1XSRjPOg5JIy-BqlAzuct8vnvV4WdNkB-9JHik" />
-    
-    <title>_CISE_ - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#edf0f8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#120e24" media="(prefers-color-scheme: dark)">
+    <script>
+        try {
+            const savedScheme = localStorage.getItem("color-scheme");
+            if (savedScheme === "light" || savedScheme === "dark") {
+                document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+                const tc = savedScheme === "dark" ? "#120e24" : "#edf0f8";
+                document.querySelectorAll('meta[name="theme-color"]').forEach((m) => {
+                    m.removeAttribute("media");
+                    m.content = tc;
+                });
+            }
+        } catch {}
+    </script>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="W6TKt1XSRjPOg5JIy-BqlAzuct8vnvV4WdNkB-9JHik">
 
-    <meta name="description" content="Portfolio of Gabriele Ciseria (Cise07), Software Developer specialized in Web Design , Python and Java applications. Click here to discover my projects.">
-    <meta name="keywords" content="Gabriele, Ciseria, Gabriele Ciseria, Cise07, _Cise_ , Treviglio, Archimede,  Fullstack Developer, IoT, Java , Python , Web Design , Portfolio, Web Developer, Italy">
+    <title>Gabriele Ciseria (_CISE_ · Cise07) — Software Developer</title>
+    <meta name="description" content="Portfolio of Gabriele Ciseria (Cise07 / _CISE_), Software Developer in Treviglio, Italy specializing in Fullstack Web Design, Python, Java, Kotlin Android apps, and IoT.">
+    <meta name="keywords" content="Gabriele, Ciseria, Gabriele Ciseria, Cise07, _CISE_, _Cise_, Treviglio, Archimede, Fullstack Developer, Software Developer, IoT, Java, Python, Kotlin, React, SQL, Web Design, Portfolio, Web Developer, Italy">
     <meta name="author" content="Gabriele Ciseria">
+    <link rel="canonical" href="https://cise07.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gabriele Ciseria (_CISE_)">
+    <meta property="og:title" content="Gabriele Ciseria (_CISE_ · Cise07) — Software Developer">
+    <meta property="og:description" content="Portfolio of Gabriele Ciseria (Cise07): Fullstack Web, Python & Java backends, Android telemetry apps, and contest-winning IoT systems.">
+    <meta property="og:url" content="https://cise07.github.io/">
+    <meta property="og:image" content="https://cise07.github.io/assets/home_cat_pic.webp">
+    <meta property="og:image:width" content="720">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Gabriele Ciseria (_CISE_) Software Developer Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gabriele Ciseria (_CISE_ · Cise07) — Software Developer">
+    <meta name="twitter:description" content="Portfolio of Gabriele Ciseria (Cise07): Fullstack Web, Python & Java backends, Android telemetry apps, and contest-winning IoT systems.">
+    <meta name="twitter:image" content="https://cise07.github.io/assets/home_cat_pic.webp">
 
     <link rel="icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/home_cat_pic.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://cise07.github.io/#website",
+                "url": "https://cise07.github.io/",
+                "name": "Gabriele Ciseria (_CISE_) — Portfolio",
+                "alternateName": ["_CISE_", "Cise07 Portfolio"]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://cise07.github.io/#person",
+                "name": "Gabriele Ciseria",
+                "alternateName": ["_CISE_", "Cise07"],
+                "jobTitle": "Software Developer",
+                "url": "https://cise07.github.io/",
+                "image": "https://cise07.github.io/assets/home_cat_pic.webp",
+                "email": "mailto:ciseriagabriele.business@gmail.com",
+                "alumniOf": {
+                    "@type": "EducationalOrganization",
+                    "name": "ISIS Archimede Treviglio"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Treviglio",
+                    "addressCountry": "IT"
+                },
+                "sameAs": [
+                    "https://github.com/Cise07",
+                    "https://www.instagram.com/24.7_cise"
+                ],
+                "knowsAbout": ["Python", "Java", "Kotlin", "Jetpack Compose", "React", "JavaScript", "HTML", "CSS", "SQL", "C", "C++", "IoT", "Linux"]
+            }
+        ]
+    }
+    </script>
+
     <script src="script.js" defer></script>
 </head>
-<body>
-    
-    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="siteHeader">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">_CISE_ 's portofolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse fw-bold navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-end"> 
-                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#portfolio">Projects</a></li>
-                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item custom-text-shadow"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+            <div class="nav-inner glass-bar">
+                <div class="glass-bar-surface" aria-hidden="true">
+                    <div id="scrollProgress" class="scroll-progress"></div>
+                </div>
+                <a class="brand" href="#top" aria-label="Gabriele Ciseria Home">
+                    <span class="brand-mark">_CISE_</span>
+                    <span class="brand-sub">Gabriele Ciseria</span>
+                </a>
+
+                <nav class="nav-menu" id="primaryNav" aria-label="Primary navigation">
+                    <ul class="nav-list" id="navList">
+                        <li style="--item-idx: 0"><a class="nav-link target-current" href="#hero" aria-current="true">Home</a></li>
+                        <li style="--item-idx: 1"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li style="--item-idx: 2"><a class="nav-link" href="#portfolio">Projects</a></li>
+                        <li style="--item-idx: 3"><a class="nav-link" href="#certificates">Certificates</a></li>
+                        <li style="--item-idx: 4"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <button type="button" id="themeToggle" class="icon-btn" title="Switch color theme">
+                        <span class="theme-opt theme-opt-dark">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                            </svg>
+                            <span class="visually-hidden">Switch to dark theme</span>
+                        </span>
+                        <span class="theme-opt theme-opt-light">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="4"/>
+                                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                            </svg>
+                            <span class="visually-hidden">Switch to light theme</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="icon-btn menu-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+                        <span class="burger-box" aria-hidden="true">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
-    <main>
-        <section class="hero-section">
-        <div class="container">
-        <div class="row align-items-center flex-column-reverse flex-lg-row">
-            
-            <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-3 custom-text-shadow fw-bold">Hi, im <span style="color: var(--accent-color)">_CISE_</span></h1>
-                <div class="typewriter-container">
-                    <h2 id="typewriter" class="typewriter-text custom-text-shadow"></h2>
+    </header>
+
+    <main id="main-content">
+        <section id="hero" class="hero-section" tabindex="-1">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="status-pill hero-stagger" style="--stagger: 0">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" class="status-icon" aria-hidden="true">
+                            <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/>
+                        </svg>
+                        <span>Open for commissioned &amp; side projects · Treviglio, IT</span>
+                    </div>
+
+                    <h1 class="hero-title hero-stagger" style="--stagger: 1">
+                        Hi, I'm Gabriele Ciseria <span class="hero-handle">_CISE_</span>
+                    </h1>
+
+                    <div class="hero-typewriter hero-stagger" style="--stagger: 2">
+                        <span class="visually-hidden">Fullstack Developer, Software Developer, Junior Android Developer, skilled in Python, CSS, Java, HTML, and Kotlin.</span>
+                        <span id="typewriter" class="typewriter-text" aria-hidden="true">Fullstack Developer</span><span class="typewriter-cursor" aria-hidden="true"></span>
+                    </div>
+
+                    <p class="hero-role hero-stagger" style="--stagger: 3">
+                        Software Developer crafting modern web interfaces, Python &amp; Java backends, and real-time mobile tools.
+                    </p>
+
+                    <div class="hero-cta hero-stagger" style="--stagger: 4">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <svg class="icon-arrow-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14M13 6l6 6-6 6"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                        <a href="./assets/downloadables/CV_Ciseria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                            <svg class="icon-external" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10"/>
+                            </svg>
+                            <span>Open CV</span>
+                        </a>
+                    </div>
                 </div>
-                <p class="lead text-muted mb-4">Junior software developer based in Treviglio.
-                    I bridge the gap between creative Web Design (HTML/CSS/JS) 
-                    and robust backend logic in Python and Java. 
-                    Focused on building efficient, agile solutions, from modern front-end
-                    interfaces to specialized CLI applications.
-                </p>
-                <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                    <a href="#portfolio" class="btn btn-primary btn-lg rounded-pill px-4">View Projects</a>
-                    <a href="#contact" class="btn btn-outline-secondary btn-lg rounded-pill px-4">Contact Me</a>
+
+                <div class="hero-visual hero-stagger" style="--stagger: 2">
+                    <div class="hero-frame" id="heroFrame">
+                        <img
+                            src="./assets/home_cat_pic.webp"
+                            alt="Avatar illustration for Gabriele Ciseria (_CISE_)"
+                            width="720"
+                            height="720"
+                            fetchpriority="high"
+                            decoding="async"
+                            class="hero-img"
+                        >
+                    </div>
                 </div>
             </div>
-
-            <div class="col-lg-5 d-flex justify-content-center mb-4 mb-lg-0">
-                <img src="./assets/home_cat_pic.webp" alt="Profile-pic" class="profile-img-hero">
-            </div>
-
-        </div>
-    </div>
         </section>
 
-        <section id="skills" class="py-5">
-    <div class="container">
-        
-        <h2 class="text-center custom-text-shadow mb-5 fw-bold">My Skills</h2>
-        
-        <div class="row g-4">
-            
-            <!-- Skill 1 -->
-            <div class="col-12 col-md-6 col-lg-3 project-card">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
-                        <i class="fas fa-code fa-3x mb-3" style="color: var(--accent-color);"></i>
-                        <h3 class="h5 fw-bold">Software Development</h3>
-                        <p class="text-muted small flex-grow-1 mb-0">C, C++, Java, Python, SQL</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill 2 -->
-            <div class="col-12 col-md-6 col-lg-3 project-card">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
-                        <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--accent-color);"></i>
-                        <h3 class="h5 fw-bold">Web Development</h3>
-                        <p class="text-muted small flex-grow-1 mb-0">HTML, CSS, Architettura MVC, Bootstrap</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill 3 -->
-            <div class="col-12 col-md-6 col-lg-3 project-card">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
-                        <i class="fas fa-server fa-3x mb-3" style="color: var(--accent-color);"></i>
-                        <h3 class="h5 fw-bold">Hardware, Software & OS</h3>
-                        <p class="text-muted small flex-grow-1 mb-0">Linux, Ubuntu, Windows, Desktop PC Building</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill 4 -->
-            <div class="col-12 col-md-6 col-lg-3 project-card">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center p-4">
-                        <i class="fas fa-users fa-3x mb-3" style="color: var(--accent-color);"></i>
-                        <h3 class="h5 fw-bold">Soft Skills</h3>
-                        <p class="text-muted small flex-grow-1 mb-0">Team Work, Problem solving, Communication</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-        <section id="portfolio" class="py-5">
+        <section id="skills" class="section" tabindex="-1">
             <div class="container">
-                <h2 class="text-center custom-text-shadow mb-5 fw-bold">Project Gallery</h2>
-
-                <div class="row g-4" id="projectsGrid">
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/ai-burnrate.webp" alt="ai-burnrate-tool"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">AI Burnrate Tool</h3>
-                                <p class="text-muted small flex-grow-1">Real-time local token &amp; API equivalent cost tracker for Antigravity CLI, Claude Code, and Codex CLI, with a live React web dashboard and CLI reporter</p>
-                                <div class="mt-auto d-flex flex-wrap gap-2">
-                                    <a href="https://github.com/Cise07/ai-burnrate-tool" class="btn btn-success btn-sm fw-bold bi bi-github" target="_blank" rel="noopener noreferrer"> Check The Repo</a>
-                                    <a href="https://cise07.github.io/ai-burnrate-tool/" class="btn btn-success btn-sm fw-bold bi bi-globe" target="_blank" rel="noopener noreferrer"> Visit Website</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/bmo.webp" alt="bmo-ai-assistant"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Bmo Local Ai Assistant (WIP) </h3>
-                                <p class="text-muted small flex-grow-1">An offline-first Bmo inspired AI assistant with online search capabilities,coded in python</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/bmo-ai-assistant" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/racing-dashboard.webp" alt="android-racing-dashboard"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Android Sim Racing Dashboard</h3>
-                                <p class="text-muted small flex-grow-1">Real-time GT3-style Android telemetry dashboard built with Kotlin & Jetpack Compose, powered by a Python WebSocket bridge for PC racing sims</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/android-racing-dashboard" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/ios-widget.webp" alt="Ios-Widget"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Ios System Status Widget</h3>
-                                <p class="text-muted small flex-grow-1">An iOS Widget written in JS that displays some system information,it works using the <strong style="text-decoration: underline;">Scriptable</strong> app on the app store</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/ios-system-status-widget" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                    <a href="https://scriptable.app" class="btn btn-success btn-sm fw-bold bi bi-download me-2" target="_blank"> Get The App</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/bwt.webp" alt="Burrows Wheeler"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Burrows Wheeler Calculator</h3>
-                                <p class="text-muted small flex-grow-1">Client-server python application to easily compress strings using bwt algorithm</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/burrows-wheeler-transform" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/Curious_traveler.webp" alt="Traveler"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Curious Traveler</h3>
-                                <p class="text-muted small flex-grow-1">CLI python app to easily create trip cards based on free APIs</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/curious-traveler" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/e-commerce.webp" alt="E-commerce"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">E-commerce Sql Simulation</h3>
-                                <p class="text-muted small flex-grow-1">A simple web app made to simulate the use of a database and sql language to manage an e-commerce website</p>
-                                <div class="mt-auto">
-                                    <a href="https://github.com/Cise07/e-commerce-management-system" class="btn btn-success btn-sm fw-bold bi bi-github me-2" target="_blank"> Check The Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/BEmore.webp" alt="bE-More"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">bE-More - Energy System</h3>
-                                <p class="text-muted small flex-grow-1">IoT System - React - Arduino - Fullstack energy monitoring.</p>
-                                <div class="mt-auto">
-                                     <a href="https://medium.com/@gizano/winning-a-tech-contest-with-be-more-integrating-iot-and-local-ai-for-a-greener-office-f906ec921963" class="btn btn-success btn-sm fw-bold" target="_blank">Read The Article</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/projects/kindness_bench.webp" alt="Bench"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">The Bench of Kindness</h3>
-                                <p class="text-muted small flex-grow-1">Social project, created a bench using AutoCad, with a peace focused quote printed on it</p>
-                                <div class="mt-auto">
-                                     <a href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="btn btn-success btn-sm fw-bold" target="_blank">Read The Article</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="section-header">
+                    <h2 class="section-title">Technical Stack &amp; Capabilities</h2>
+                    <p class="section-subtitle">Core languages, frameworks, and environments I use to ship end-to-end software.</p>
                 </div>
 
+                <div class="bento-grid">
+                    <article class="bento-cell bento-wide">
+                        <div class="bento-head">
+                            <span class="bento-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </span>
+                            <h3 class="bento-title">Backend &amp; Systems Development</h3>
+                        </div>
+                        <p class="bento-desc">Object-oriented and procedural software, client-server sockets, data compression algorithms, relational databases, and fast CLI tooling.</p>
+                        <ul class="tag-list" aria-label="Backend technologies">
+                            <li class="tech-tag">Python</li>
+                            <li class="tech-tag">Java</li>
+                            <li class="tech-tag">C</li>
+                            <li class="tech-tag">C++</li>
+                            <li class="tech-tag">SQL</li>
+                            <li class="tech-tag">WebSockets</li>
+                            <li class="tech-tag">CLI Apps</li>
+                        </ul>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-head">
+                            <span class="bento-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/>
+                                </svg>
+                            </span>
+                            <h3 class="bento-title">Web &amp; Mobile Interfaces</h3>
+                        </div>
+                        <p class="bento-desc">Responsive web applications, component dashboards, and native Android telemetry UIs.</p>
+                        <ul class="tag-list" aria-label="Frontend and mobile technologies">
+                            <li class="tech-tag">HTML5</li>
+                            <li class="tech-tag">CSS3</li>
+                            <li class="tech-tag">JavaScript</li>
+                            <li class="tech-tag">React</li>
+                            <li class="tech-tag">Kotlin</li>
+                            <li class="tech-tag">Jetpack Compose</li>
+                            <li class="tech-tag">MVC Architecture</li>
+                        </ul>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-head">
+                            <span class="bento-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><circle cx="6" cy="6.5" r="1"/><circle cx="6" cy="17.5" r="1"/>
+                                </svg>
+                            </span>
+                            <h3 class="bento-title">OS, Hardware &amp; IoT</h3>
+                        </div>
+                        <p class="bento-desc">Embedded sensor integration, Linux environments, version control workflows, and custom workstation assembly.</p>
+                        <ul class="tag-list" aria-label="Infrastructure and hardware skills">
+                            <li class="tech-tag">Linux / Ubuntu</li>
+                            <li class="tech-tag">Arduino &amp; IoT</li>
+                            <li class="tech-tag">Git &amp; GitHub</li>
+                            <li class="tech-tag">Windows</li>
+                            <li class="tech-tag">PC Building</li>
+                            <li class="tech-tag">AutoCAD</li>
+                        </ul>
+                    </article>
+
+                    <article class="bento-cell bento-wide">
+                        <div class="bento-head">
+                            <span class="bento-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </span>
+                            <h3 class="bento-title">Collaboration &amp; Delivery</h3>
+                        </div>
+                        <p class="bento-desc">Practical engineering mindset honed through team hackathons, school-community initiatives, and open-source developer tools.</p>
+                        <ul class="tag-list" aria-label="Collaboration skills">
+                            <li class="tech-tag">Agile Teamwork</li>
+                            <li class="tech-tag">Problem Solving</li>
+                            <li class="tech-tag">Technical Writing</li>
+                            <li class="tech-tag">Cambridge B2 English</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
         </section>
 
-         <section id="certificates" class="py-5">
+        <section id="portfolio" class="section" tabindex="-1">
             <div class="container">
-                <h2 class="text-center custom-text-shadow mb-5 fw-bold">Certificates & Badges</h2>
-
-                <div class="row g-4" id="projectsGrid">
-                     <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/Statement.webp" alt="statement"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">B2 English Cambridge Certificate</h3>
-                                <p class="text-muted small flex-grow-1">B2 english certificate issued by Cambridge Milano</p>
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/Statement.webp" class="btn btn-success btn-sm fw-bold" target="_blank">Open Certificate</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="section-header section-header-split">
+                    <div>
+                        <h2 class="section-title">Selected Projects</h2>
+                        <p class="section-subtitle">Open-source tools, mobile dashboards, and fullstack experiments.</p>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/Github_cert.webp" alt="github-cert"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Git-Hub Certificate</h3>
-                                <p class="text-muted small flex-grow-1">Git-Hub certificate issued by Sorint.lab "Hackersgen",obtained by completing an online course</p>
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/Github_cert.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Certificate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/english-listening-badge.webp" alt="eng-list-badge"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">B2 English Listening Badge</h3>
-                                
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/english-listening-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/english-reading-badge.webp" alt="eng-read-badge"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">B2 English Reading Badge</h3>
-                                
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/english-reading-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/ita-badge.webp" alt="ita-badge"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Level 3 Italian Language Badge</h3>
-
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/ita-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container"><img src="./assets/certificates-badges/math-badge.webp" alt="math-badge"></div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h5 fw-bold">Level 3 Math Badge</h3>
-                               
-                                <div class="mt-auto">
-                                     <a href="./assets/certificates-badges/math-badge.webp" class="btn btn-success btn-sm fw-bold " target="_blank">Open Badge</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="filter-bar" id="projectFilters" role="toolbar" aria-label="Filter projects by category">
+                        <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" class="filter-chip" data-filter="ai-python" aria-pressed="false">AI &amp; Python</button>
+                        <button type="button" class="filter-chip" data-filter="web-mobile" aria-pressed="false">Web &amp; Mobile</button>
+                        <button type="button" class="filter-chip" data-filter="iot-other" aria-pressed="false">IoT &amp; Design</button>
                     </div>
                 </div>
 
+                <div class="projects-grid" id="projectsGrid"></div>
+                <div class="projects-more-wrap" id="projectsMoreWrap">
+                    <button type="button" class="btn btn-secondary projects-toggle-btn" id="projectsToggleBtn" aria-expanded="false" aria-controls="projectsGrid">
+                        <span id="projectsToggleLabel">Show 5 more projects</span>
+                        <span class="projects-count-badge" id="projectsCountBadge">+5</span>
+                        <svg class="projects-toggle-chevron" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <noscript>
+                    <p class="noscript-note">Enable JavaScript to browse interactive project filters, or visit <a href="https://github.com/Cise07">github.com/Cise07</a>.</p>
+                </noscript>
             </div>
         </section>
 
-        <section id="contact" class="py-5 bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="custom-text-shadow mb-4">Get in Touch</h2>
-        
-        <div class="d-flex flex-column align-items-center gap-3 mb-5">
-            <p class="mb-0">Email: ciseriagabriele.business@gmail.com</p>
-            
-            <a href="./assets/downloadables/CV_Ciseria.pdf" download="CV_Ciseria.pdf" class="btn btn-outline-light mt-2 custom-text-shadow">
-                <i class="fas fa-file-download me-2"></i> Download my CV
-            </a>
-        </div>
+        <section id="certificates" class="section" tabindex="-1">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Certificates &amp; Badges</h2>
+                    <p class="section-subtitle">Verified language qualifications, technical courses, and academic proficiency badges.</p>
+                </div>
 
-        <div class="social-links d-flex justify-content-center gap-4">
-            <a href="https://www.instagram.com/24.7_cise?igsh=MWNveDA3dXFwZGpw&utm_source=qr" target="_blank" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://github.com/Cise07" target="_blank" class="text-white"><i class="fab fa-github fa-2x"></i></a>
-        </div>
-    </div>
-</section>
+                <div class="cert-grid" id="certificatesList"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" tabindex="-1">
+            <div class="container">
+                <div class="contact-panel">
+                    <div class="contact-copy">
+                        <h2 class="section-title">Have a Side Project in Mind?</h2>
+                        <p class="section-subtitle">Available for select commissioned web builds, custom tools, and technical collaborations alongside my full-time work. Drop me an email with your idea.</p>
+
+                        <div class="email-box">
+                            <a href="mailto:ciseriagabriele.business@gmail.com" class="email-link">
+                                ciseriagabriele.business@gmail.com
+                            </a>
+                            <button type="button" class="btn btn-secondary btn-sm" id="copyEmailBtn" data-email="ciseriagabriele.business@gmail.com">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                </svg>
+                                <span id="copyEmailLabel">Copy email</span>
+                            </button>
+                            <span id="copyFeedback" class="visually-hidden" role="status" aria-live="polite"></span>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="./assets/downloadables/CV_Ciseria.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg class="icon-external" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10"/>
+                            </svg>
+                            <span>Open CV (PDF)</span>
+                        </a>
+
+                        <div class="social-row">
+                            <a href="https://github.com/Cise07" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub profile (Cise07)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+
+                            <a href="https://www.instagram.com/24.7_cise" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram (@24.7_cise)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <button id="theme-toggle" class="btn-floating">
-    <i id="theme-icon" class="fas fa-moon"></i>
-    </button>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">© 2026 Gabriele Ciseria (<code>_CISE_</code>) · Treviglio, Italy</p>
+            <a href="#top" class="footer-top">Back to top ↑</a>
+        </div>
+    </footer>
 </body>
 </html>
